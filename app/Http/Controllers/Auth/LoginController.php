@@ -63,7 +63,7 @@ class LoginController extends Controller
                 return redirect()->back();
             }
         } else {
-            return redirect()->back()->withErrors($validator->errors());
+            return redirect()->back()->withErrors($validator->errors()); //add flash data under the key errors
         }
     }
 

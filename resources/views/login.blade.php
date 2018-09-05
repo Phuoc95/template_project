@@ -32,7 +32,7 @@
                 <div id="inputs">
                     <div class="form-block">
                         <input type="text" placeholder="Email" name="email" autocomplete="off"> <i class="icon-user-check"></i>
-                        @if ($errors->has('email'))
+                        @if ( $errors && $errors->has('email'))
                         <label class="error">
                             <strong>{{ $errors->first('email') }}</strong>
                         </label>
@@ -41,7 +41,7 @@
 
                     <div class="form-block">
                         <input type="password" placeholder="Password" name="password" autocomplete="off"> <i class="icon-spell-check"></i>
-                         @if ($errors->has('password'))
+                         @if ($errors && $errors->has('password'))
                         <label class="error">
                             <strong>{{ $errors->first('password') }}</strong>
                         </label>
